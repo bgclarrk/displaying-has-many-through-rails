@@ -2,8 +2,10 @@
 <p>
   Content: <%= @post.content %>
 </p>
-Comments:
+<h4>Comments:</h4>
+<p>
   <% @post.comments.each do |comment| %>
     <%= link_to comment.user.username, user_path(comment.user) %> said
     <%= comment.content %>
   <% end %>
+</p>
